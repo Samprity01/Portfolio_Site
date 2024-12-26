@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certifications</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: rgb(4, 7, 9);
+        }
+
+        h3 {
+            margin-top: 50px;
+            color: rgb(21, 18, 18);
+        }
+
+        h4, p {
+            color: rgb(11, 10, 10);
+        }
+
+        #element {
+            color: rgb(13, 11, 13);
+            font-size: medium;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .text-content {
+            max-width: 60%;
+        }
+
+        .image-content {
+            text-align: right;
+        }
+
+        .image-content img {
+            border-radius: 50%;
+            box-shadow: 20px 30px 20px rgba(135, 206, 235, 0.5);
+            width: 290px;
+            height: 290px;
+            object-fit: cover;
+            transition: margin 0.3s ease;
+        }
+
+        .image-content img:hover {
+            margin-top: -20px;
+        }
+
+        .certification {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 20px auto;
+            padding: 15px;
+            border-radius: 10px;
+            width: 80%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .certification h2 {
+            color: rgb(17, 19, 20);
+            margin: 0 0 10px;
+        }
+
+        .certification p {
+            margin: 5px 0;
+        }
+
+        .certification a {
+            color: rgb(135, 206, 250);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .certification a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>Certifications</h1>
+    </header>
+
+    <div class="content">
+        <div class="text-content">
+            <h3>Hello, It's me</h3>
+            <h1>Samprity Ghosh</h1>
+            <h4>and I am</h4>
+            <p id="element">I am a Frontend-developer and also an enthusiast with AIML, NLP, Data Analytics, LLMs, etc.</p>
+        </div>
+
+        <div class="image-content">
+            <img src="Samprity Ghosh_ CSE.jpeg" alt="Samprity Ghosh">
+        </div>
+    </div>
+
+    <div id="certifications-container">
+        <!-- Certificates will be dynamically added here -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        // Typed.js for dynamic text
+        var typed = new Typed('#element', {
+            strings: ['Frontend Developer', 'AIML enthusiast', 'Prompt Engineer', 'Working also on LLMs'],
+            typeSpeed: 50,
+        });
+
+        // Array of certificates
+        const certifications = [
+            {
+                name: "AIML under ARDENT PVT. LTD",
+                description: "Completed a certification in Artificial Intelligence and Machine Learning, gaining hands-on experience in building ML models.",
+                link: "https://drive.google.com/link-to-certificate1"
+            },
+            {
+               name:"AWS Cloud Practitioner Essentials",
+               description:"Completed  a certification in AWS Cloud Practitioner Essentials, gaining knowledge aout all services of AWS and also practical experiences",
+               link:"https://drive.google.com/file/d/1gKAbjR7cWV_seGnqVY3DpN3jOqwcQMz4/view?usp=sharing"
+            },
+            {
+               name:"ARTIFICIAL INTELLIGENCE & MACHINE LEARNING USING PYTHON",
+               description:"Completed  a certification in python Under ARDENT PVT LTD, learning python in data analysis and mathametical expression , regex , file handeling and others",
+               link:"https://drive.google.com/file/d/15Ei_JHJ-4_lh2wJ65uVZODQZa2WV8_iL/view?usp=sharing"
+
+            },
+            {
+                name: "Data Analytics Specialization",
+                description: "Gained proficiency in data analysis techniques and visualization tools.",
+                link: "https://drive.google.com/file/d/14KFFEjycf4ltbwJ70uHbznMdDQXQH0x2/view?usp=drive_link"
+            },
+            {
+                name: "Prompt Engineering Basics",
+                description: "Learned techniques to craft effective prompts for AI models to improve output clarity and relevance.",
+                link: "https://drive.google.com/file/d/1v3whU1yrWzFSX2bUhl0KKAoiJH0Yzf5L/view?usp=drive_link"
+            }
+        ];
+
+        // Dynamically render certificates
+        const container = document.getElementById('certifications-container');
+        certifications.forEach(cert => {
+            const certDiv = document.createElement('div');
+            certDiv.classList.add('certification');
+            certDiv.innerHTML = `
+                <h2>${cert.name}</h2>
+                <p>${cert.description}</p>
+                <a href="${cert.link}" target="_blank">View Certificate</a>
+            `;
+            container.appendChild(certDiv);
+        });
+    </script>
+</body>
+
+</html>

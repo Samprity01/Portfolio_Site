@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="https:??unpkg.com/typed.js02.0.15/dist/typed.umd.js"></script>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        html {
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(22, 22, 63);
+            margin-top: 80px;
+        }
+        .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 20px 40px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 24px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 15px;
+        transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        color: #f39c12;
+    }
+
+    .navbar a:not(:last-child) {
+        margin-right: 20px; /* Adds gap between each navbar option */
+    }
+
+    .navbar .active {
+        color: #f39c12; /* Active link color */
+    }
+
+        section {
+            padding: 60px 20px;
+            margin-top: 60px;
+            background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+        }
+
+
+        .home-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-content {
+            max-width: 600px;
+        }
+
+        .text-content h3 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .text-content h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .text-content p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+
+        .home-scl a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #333;
+            font-size: 24px;
+            background: transparent;
+            transition: color 0.3s;
+            border: 2px solid black;
+            border-radius: 50%;
+            font-size: 20px;
+            color: #0ef;
+            text-decoration: none;
+            margin: 30px 15px 30px 0;
+        }
+
+        .home-scl a:hover {
+            color: #0073b1;
+            background: #0ef;
+            box-shadow: 0 0 20px #0ef;
+        }
+
+        /* Additional Styles for Better Spacing */
+        body {
+            padding-top: 60px;
+            /* Adjust this value if needed to create more space */
+            background-color: #f4f4f4;
+        }
+
+        section {
+            padding: 60px 20px;
+            margin-top: 60px;
+            background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+        }
+
+
+        .home-content {
+            padding: 40px;
+        }
+
+        .btn-box {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background-color: #0073b1;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-box:hover {
+            box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+
+        }
+
+
+        h3 {
+            padding:100px;
+            margin-top: 50px;
+        }
+
+        .image-content img {
+            border-radius: 50%;
+            box-shadow: 20px 30px 20px rgba(135, 206, 235, 0.5);
+            width: 290px;
+            height: 290px;
+            object-fit: cover;
+            position: absolute;
+            right: 5%;
+            top: 17%;
+            transition: margin 0.3s ease;
+        }
+
+        .image-content img:hover {
+            margin-top: -20px;
+        }
+
+        #page2 {
+    margin-top: 250px;
+    height: auto; /* Adjusts height dynamically based on content */
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Aligns content vertically */
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 20px; /* Adds spacing inside the div */
+    box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+}
+
+#page2 h5 {
+    font-size: 22px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500;
+    margin-bottom: 15px; /* Adds spacing below the h5 */
+    text-align: center; /* Centers text horizontally */
+}
+
+#page2 h1 {
+    font-style: italic;
+    margin-bottom: 20px; /* Adds spacing below the h1 */
+    text-align: center; /* Centers text horizontally */
+}
+
+#page2 h3, #page2 h4 {
+    margin: 15px 0; /* Adds vertical spacing */
+    text-align: center; /* Centers text horizontally */
+}
+
+#page2 ul {
+    list-style-type: none; /* Removes default bullet points */
+    padding: 0; /* Removes default padding */
+    margin: 0 0 20px 0; /* Adds spacing below the list */
+    text-align: center; /* Centers text */
+}
+
+#page2 ul li {
+    margin-bottom: 10px; /* Adds spacing between list items */
+}
+
+#page2 .about {
+    margin-top: 20px; /* Adds spacing above the about section */
+}
+
+#page2 .about a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #444;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#page2 .about a:hover {
+    background-color: #888; /* Changes background color on hover */
+}
+
+        .about a:hover {
+            color: #e0f7fa;
+        }
+
+        #element {
+            color: rgb(168, 51, 168);
+            font-size: medium;
+            font-style: italic;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            height: 233px;
+        }
+
+        .footer {
+            display: flex;
+            margin: 23px 122px;
+            justify-content: space-evenly;
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+    
+        <nav class="navbar">
+            <a href="index.html" id="home" class="navbar-link">Home</a>
+           <a href="Skills.html" >Skills</a>
+           <a href="Activities.html">Activities</a>
+            <a href="Academics.html" id="academics-skill" class="navbar-link">Academics</a>
+            <a href="Projects.html" id="projects" class="navbar-link">Projects</a>
+            <a href="certifications.html" id="certifications" class="navbar-link">Certifications</a>
+            <a href="Contactme.html" id="contact" class="navbar-link">Contact Me</a>
+        </nav>
+        
+    </header>
+
+
+    <h3>Hello ,It's me</h3>
+    <h1>Samprity Ghosh</h1>
+    <h4>and I am </h3>
+        <p id="element">I am a Frontend-developer  and also enthusiast with AIML and NLP, Data Analytics, LLMS etc</p>
+        <div class="image-content">
+            <img src="image.jpg" alt="Samprity Ghosh">
+        </div>
+
+
+
+        <div id="page2">
+            <h5>I'm passionate about exploring latest technologies that can change people's lifestyle.</h5>
+            
+            <h1>I research latest ML and Deep Learning architecture & data analysis & also exploring LLMS's AMAZING world.</h1>
+            
+            <h3>Technologies I work with:</h3>
+            
+            <h4>Fullstack Development:</h4>
+            <ul>
+                <li>Frontend Framework: React.js</li>
+                <li>Fullstack Framework: Next.js</li>
+                <li>Backend: Express.js</li>
+                <li>Database Area: MySQL</li>
+                <li>NoSQL: MongoDB</li>
+            </ul>
+            
+            <h4>Software Skills:</h4>
+            <ul>
+                <li>Languages: C, C++, Java, Python, JavaScript, TypeScript</li>
+            </ul>
+            
+            <h4>Cloud Systems:</h4>
+            <ul>
+                <li>AWS (Amazon Web Services)</li>
+            </ul>
+            
+            <h4>AI/ML:</h4>
+            <ul>
+                <li>Machine Learning</li>
+                <li>Deep Learning</li>
+                <li>NLP (Natural Language Processing)</li>
+                <li>Generative AI (Beginners)</li>
+            </ul>
+            
+            <div class="about">
+                <a href="#">About me</a>
+            </div>
+        </div>
+        
+        
+
+        <!-- <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">React</div>
+            <div class="skill-box">Node.js</div>
+            <div class="skill-box">Python</div>
+            <div class="skill-box">Machine Learning</div>
+            <div class="skill-box">Deep Learning</div>
+        </div>
+    </section> -->
+
+        <footer>
+            <div class="footer">
+                <div class="footer-first">
+                    <h2>Samprity's Developer Portfolio</h2>
+                </div>
+                <div class="footer-second">
+                    <ul>
+                        <li>home</li>
+                        <li>skills</li>
+                        <li>projects</li>
+                        <li>academics</li>
+                        <li>contact me</li>
+                    </ul>
+                </div>
+
+                <div class="footer-third">
+
+                </div>
+
+                <div class="footer-fourth">
+
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        <script>
+            var typed = new Typed('#element', {
+                strings: ['Frontend Developer', 'AIML enthusiast', 'Prompt Engineer', 'Working also on LLMS'],
+                typeSpeed: 50,
+            });
+        </script>
+
+        <script src="script.js"></script>
+        <script src="main.js"></script>
+</body>
+
+</html>

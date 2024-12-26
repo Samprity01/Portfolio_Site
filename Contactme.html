@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Samprity</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #0f0f0f;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease;
+        }
+        a {
+            color: #110f0f;
+            text-decoration: none;
+            font-size: 1.2rem;
+            margin: 15px;
+            display: inline-block;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        a:hover {
+            color: aquamarine;
+            transform: scale(1.1);
+        }
+        .info {
+            margin: 20px 0;
+        }
+        .info h4 {
+            margin: 10px 0;
+            font-size: 1rem;
+            color: #050505;
+            animation: slideIn 1.2s ease;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #0b0a0a;
+            padding: 20px;
+            background: linear-gradient(90deg, rgb(205, 187, 224) 0%, rgb(208, 174, 255) 50%, rgb(201, 151, 251) 100%);
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+        footer span {
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+        footer span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        footer span:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        footer span:nth-child(3) {
+            animation-delay: 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feel free to reach out for collaborations, inquiries, or just to connect. I look forward to hearing from you!</h1>
+        <div class="links">
+            <a href="https://github.com/Samprity01" class="github">GitHub</a>
+            <a href="https://www.linkedin.com/in/samprity-ghosh/" class="linkedin">LinkedIn</a>
+        </div>
+        <div class="info">
+            <h4 id="one">Phone: 9432932987</h4>
+            <h4 id="two">Email: samprityghosh234@gmail.com</h4>
+            <h4 id="three">WhatsApp: 9432932987</h4>
+        </div>
+    </div>
+    <footer>
+        <span>Designed</span> <span>with</span> <span>passion</span> <span>by</span> <span>Samprity Ghosh.</span>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        // GSAP Animations
+        window.onload = () => {
+            gsap.from("h1", {
+                duration: 1.5,
+                opacity: 0,
+                y: -50,
+                ease: "power2.out",
+            });
+
+            gsap.from(".links a", {
+                duration: 1,
+                opacity: 0,
+                y: 20,
+                stagger: 0.3,
+                ease: "power2.out",
+            });
+
+            gsap.from(".info h4", {
+                duration: 1.2,
+                opacity: 0,
+                x: -50,
+                stagger: 0.3,
+                ease: "power2.out",
+            });
+
+            gsap.to("footer span", {
+                duration: 3,
+                y: -10,
+                repeat: -1,
+                yoyo: true,
+                stagger: 0.5,
+                ease: "power1.inOut",
+            });
+        };
+    </script>
+</body>
+</html>

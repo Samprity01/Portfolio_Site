@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Activities</h1>
+    </header>
+
+    <main>
+        <section class="activity">
+            <h2>Bootcamp(TECHEDGE 3.0)</h2>
+            <p>This bootcamp provided intensive training on DSA, Software related knowledge, COding puzzles</p>
+            <a href="https://drive.google.com/file/d/12DraM7P9nuVC-WAArek8ba2E8WTUOLt7/view?usp=drive_link" target="_blank">View Certificate</a>
+        </section>
+
+        <section class="activity">
+            <h2>Hackathons</h2>
+            <div class="hackathon">
+                <h3>Hackathon 1: CodeSprint 1.O</h3>
+                <p>This hackathon focused on developing solutions for innovations in the filed of EdTech and FoodTech.</p>
+                <h3>It was a 36 Hours Hackathon</h3>
+                <a href="https://drive.google.com/file/d/1tuYzWloQ9DchwojbPc9J6YfUjOn2j-_I/view?usp=sharing" target="_blank">View Certificate</a>
+            </div>
+            <div class="hackathon">
+                <h3>Hackathon 2: EduHacks 1.O</h3>
+                <p>An Amazing Hacktahon based on EdTech, FinTech, FoodTech  and also own's Interested domain</p>
+                <h3>It was a 24 hours Virtual Hackathon</h3>
+                <a href="https://drive.google.com/file/d/105i5Rs2IiVTYGcLkm6wxsUu1ld8xN-P_/view?usp=drive_link" target="_blank">View Certificate</a>
+            </div>
+        </section>
+        <section class="activity">
+            <h2>Competitions</h2>
+            <div class="competition">
+                <h3>Competition 1: Flipkart Grid 6.O</h3>
+                
+                <a href="https://drive.google.com/file/d/1wX4FiAUhN3oqyawwyj77i0VXai5cld9A/view?usp=drive_link" target="_blank">View Certificate</a>
+            </div>
+            <div class="competition">
+                <h3>Competition 2: Techquiz Participation</h3>
+                
+                <a href="https://drive.google.com/file/d/1Ul9zLH24RlRdPCVZzGvM359_pSDsY1J3/view?usp=drive_link" target="_blank">View Certificate</a>
+            </div>
+            <div class="competition">
+                <h3>Competition 2: ICPC Coding Challenge</h3>
+                
+                <a href="https://drive.google.com/file/d/1ViVMs6wyO_0sLDsf_cMWhfbZflgDt3Dj/view?usp=sharing" target="_blank">View Certificate</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="interactive-footer">
+        <div class="footer-content">
+            <p>Connect with us on social media:</p>
+            <ul class="social-links">
+                
+                <li><a href="https://www.linkedin.com/in/samprity-ghosh/" class="footer-link">LinkedIn</a></li>
+                <li><a href="https://github.com/Samprity01" class="footer-link">Github</a></li>
+            </ul>
+        </div>
+        <div class="footer-copy">
+            &copy; 2024 Samprity Ghosh. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    header {
+        background: #f6f8f9;
+        color: rgb(0, 0, 0);
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .activity {
+        background: white;
+        margin-bottom: 20px;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .hackathon {
+        margin-top: 10px;
+    }
+
+    footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .social-links {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .social-links li {
+        display: inline;
+        margin-right: 15px;
+    }
+
+    .footer-link {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer-link:hover {
+        text-decoration: underline;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        header, footer {
+            text-align: center;
+            padding: 15px;
+        }
+        
+        .activity {
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .social-links li {
+            display: block; /* Stack links on mobile */
+            margin-bottom: 10px; 
+        }
+    }
+</style>
+
+<script>
+// GSAP Animation
+document.querySelectorAll('.activity').forEach(activity => {
+    activity.addEventListener('mouseenter', () => {
+        gsap.to(activity, { scale: 1.05, duration: 0.3 });
+    });
+    
+    activity.addEventListener('mouseleave', () => {
+        gsap.to(activity, { scale: 1, duration: 0.3 });
+    });
+});
+</script>

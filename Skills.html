@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills | Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #070707;
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #080808;
+            margin: 0 10px;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: rgb(0, 0, 0);
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .skill-section {
+            margin-bottom: 40px;
+        }
+
+        .skill-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: rgb(15, 16, 15);
+        }
+
+        .skill {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .progress-container {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+        }
+
+        .progress-bar {
+            background-color: #ffffff;
+            width: 100%;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+
+        .progress-bar .progress {
+            height: 10px;
+            background-color: aquamarine;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1>Skills</h1>
+
+        <div class="skill-section">
+            <h2>AIML</h2>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <span>5/10</span>
+            </div>
+        </div>
+
+        <div class="skill-section">
+            <h2>Full Stack Web Development</h2>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                <span>8/10</span>
+            </div>
+        </div>
+
+        <div class="skill-section">
+            <h2>AWS</h2>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <span>5/10</span>
+            </div>
+        </div>
+
+        <div class="skill-section">
+            <h2>Language-Based Skills</h2>
+            <div class="skill">C</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+                <span>9/10</span>
+            </div>
+            <div class="skill">C++</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+                <span>10/10</span>
+            </div>
+            <div class="skill">Python</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                <span>8/10</span>
+            </div>
+            <div class="skill">Java</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+                <span>9/10</span>
+            </div>
+            <div class="skill">JavaScript</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+                <span>6/10</span>
+            </div>
+        </div>
+
+        <div class="skill-section">
+            <h2>Frameworks</h2>
+            <div class="skill">React.js (Frontend-based)</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+                <span>8/10</span>
+            </div>
+            <div class="skill">Next.js (Fullstack-based)</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+                <span>9/10</span>
+            </div>
+            <div class="skill">Express.js (Backend-based)</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+                <span>7/10</span>
+            </div>
+        </div>
+
+        <div class="skill-section">
+            <h2>Databases</h2>
+            <div class="skill">MySQL</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 100%;"></div>
+                </div>
+                <span>10/10</span>
+            </div>
+            <div class="skill">MongoDB</div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+                <span>7/10</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
